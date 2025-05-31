@@ -1913,7 +1913,7 @@ EPM_auth_parse <- function(x, max_authors = 15, autofill = TRUE) {
   # nested f(x)
   inner_fx <- function(z) {
     
-    emapat <- paste0("([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})")
+    emapat <- paste0([a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?)
     
     lastnm <- tryCatch({
       EPM_custom_grep(xml_data = z, tag = 'LastName', format = 'char')}, 
